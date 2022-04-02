@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Quantified Self App</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static',filename='bootstrap/css/bootstrap.min.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static',filename='style.css') }}"
+    />
+    <script
+      type="text/javascript"
+      src="{{ url_for('static',filename='js/custom_validations.js') }}"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1 class="display-4">Quantified Self</h1>
+        <h4>Log Tracker</h4>
+      </div>
+			<form>
+  <div class="form-group row">
+    <label for="When" class="col-sm-2 col-form-label">When</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="When" >
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="value" class="col-sm-2 col-form-label">Value</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="value" >
+    </div>
+  </div>
+    <div class="form-group row">
+    <label for="notes" class="col-sm-2 col-form-label">Notes</label>
+    <div class="col-sm-10">
+      <textarea type="text" class="form-control" id="notes"> </textarea>
+    </div>
+  </div>
+  
+  
+  <div class="container">
+  <div class="row">
+  <div class="col-sm">
+     
+    </div>
+    <div class="col-sm">
+      <button type="submit"  class="btn btn-success btn-lg">Log It</button>
+    </div>
+
+	</div>
+  </div>
+</form>
+
+
+  </body>
+</html>

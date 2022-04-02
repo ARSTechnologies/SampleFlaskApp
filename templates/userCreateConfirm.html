@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Quantified Self App</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static',filename='bootstrap/css/bootstrap.min.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static',filename='style.css') }}"
+    />
+    <script
+      type="text/javascript"
+      src="{{ url_for('static',filename='js/custom_validations.js') }}"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1 class="display-4">Quantified Self</h1>
+        <h4>User {{username}} Created Successfully. </h4>
+      </div>
+			
+<h4> Please <a href="/">login</a> to proceed with using the Quantified Self App </h4>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Quantified Self App</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static',filename='bootstrap/css/bootstrap.min.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static',filename='style.css') }}"
+    />
+    <script
+      type="text/javascript"
+      src="{{ url_for('static',filename='js/custom_validations.js') }}"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1 class="display-4">Hello {{ username }}</h1>
+        <h4>Welcome to QuantifiedApp Dashboard</h4>
+      </div>
+		<table class="table table-hover">
+  <caption>List of Tracked Activities</caption>
+  <thead>
+
+    <tr>
+      <th scope="col">Tracker</th>
+      <th scope="col">Last Tracked</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for tracker in trackers %}
+    <tr>
+      <td><a href={{ url_for('trendLines',trackerId=tracker.trackerid,userId=tracker.userid)}}>{{tracker.trackerName}}</a></td>
+      <td>{{lastTracked[tracker.trackerid]}} Days Ago</td>
+      <td><a href={{ url_for('logTracker',trackerId=tracker.trackerid,userId=tracker.userid)}}>+</a></td>
+	  <td>Dropdown Actions</td>
+    </tr>
+	{% endfor %}
+  </tbody>
+</table>
+
+		  <a href="/addTracker/{{ username }}" >Add Tracker</a>
+	</form>
+
+
+
+  </body>
+</html>
